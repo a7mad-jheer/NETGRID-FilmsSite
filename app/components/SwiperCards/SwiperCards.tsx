@@ -36,7 +36,6 @@ export default function SwiperCards({
     });
   });
 
-  console.log(progress);
   return (
     <div className="">
       <Swiper
@@ -48,7 +47,6 @@ export default function SwiperCards({
         loop={true}
         spaceBetween={50}
         slidesPerView={1}
-        onSlideChange={() => console.log("slide change")}
         className={` w-full ${className || "h-96"}`}
         onSwiper={(instance) => setSwiper(instance)}
       >

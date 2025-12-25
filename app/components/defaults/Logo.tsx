@@ -1,8 +1,8 @@
 import Link from "next/link"
-export default function Logo () {
+export default function Logo ({className , href} : {className ?: string , href : string}) {
     return (
-        <Link href = "/" className="text-lg md:text-xl flex justify-center w-full ">
-            <h1 className="text-amber-500 font-semibold mb-10">NetGrid</h1>
+        <Link href = {href} className="text-2xl md:text-xl   ">
+            <h1 className={`${className || ""} text-amber-50 `}>Net<span className="text-amber-600">Grid</span></h1>
         </Link>
     )
 } 

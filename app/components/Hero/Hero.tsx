@@ -5,20 +5,22 @@ import HeroCardInfo from "../HeroCardInfo/HeroCardInfo";
 
 export default function Hero() {
   return (
-    <div>
+    <div className=" max-w-full mx-10">
       <SwiperCards
-        className="h-96 my-5 rounded-sm overflow-hidden"
+        className="h-96 my-5 rounded-sm overflow-hidden "
         paginationImage
         items={[
           {
             cards: (
-              <section className="w-full h-full ">
-                <Image
+              <section className="w-full ">
+                <div className="relative overflow-hidden max-w-[1200px] h-96 ">
+                  <Image
                   src="/page1.jpg"
                   alt="card-image"
                   fill
                   className="object-cover  "
                 />
+                </div>
 
                 <HeroCardInfo
                   title="First Films"
@@ -32,12 +34,12 @@ export default function Hero() {
           },
           {
             cards: (
-              <div className=" w-full h-full">
+              <div className="relative overflow-hidden max-w-[1200px] h-96">
                 <Image
                   src="/page2.jpg"
                   alt="card-image"
                   fill
-                  className="object-cover"
+                  className="object-cover "
                 />
               </div>
             ),
@@ -45,12 +47,14 @@ export default function Hero() {
           },
           {
             cards: (
+              <div className="relative overflow-hidden max-w-[1200px] h-96">
               <Image
                 src="/page.jpg"
                 alt="card-image"
                 fill
                 className="object-cover"
               />
+              </div>
             ),
             src: "/page.jpg",
           },

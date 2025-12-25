@@ -1,9 +1,15 @@
-import Hero from "../components/Hero/Hero";
+import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 
-export default function Home() {
-  return (
-    <main >
-      <Hero />
-    </main>
-  );
+
+export default async function Home() {
+  const token = (await cookies()).get('token');
+
+  if (token) {
+    redirect("/Dashboard"); // ✅ يدخل route
+  } else {
+    redirect("/LandingPage");
+  }
+
 }
+
