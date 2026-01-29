@@ -1,8 +1,7 @@
-import { searchMovies } from "@/app/api/api";
-import Hero from "@/app/components/Hero/Hero";
-import MoviesList from "@/app/components/MoviesList/MoviesList";
-import { NavBar } from "@/app/components/Nav/NavBar";
-
+import { searchMovies } from "@/core/utils/api";
+import Hero from "@/components/Dashboard/Hero/Hero";
+import MoviesList from "@/components/Dashboard/MoviesList/MoviesList";
+import { NavBar } from "@/components/Dashboard/NavBar";
 
 export default async function Dashboard() {
   const resultPop = await searchMovies("movie/popular", "", 1, 20, 0, []);

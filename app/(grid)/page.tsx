@@ -6,7 +6,7 @@ export default async function Home() {
   const token = (await cookies()).get('token');
 
   if (token) {
-    redirect("/Dashboard"); // ✅ يدخل route
+    redirect("/Dashboard"); 
   } else {
     redirect("/LandingPage");
   }

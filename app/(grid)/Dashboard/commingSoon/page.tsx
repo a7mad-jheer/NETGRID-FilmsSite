@@ -1,12 +1,16 @@
-import CardMovies from "@/app/components/CardMovies/CardMovies";
-import { PaginationDemo } from "@/app/components/defaults/Bagination";
+import CardMovies from "@/components/Dashboard/CardMovies/CardMovies";
 
-export default function CommingSoon({ searchParams }: { searchParams?: { page?: string } }) {
-  const page = Number(searchParams?.page) || 1; 
+
+export default function CommingSoon({
+  searchParams,
+}: {
+  searchParams?: { page?: string };
+}) {
+  const page = Number(searchParams?.page) || 1;
 
   return (
     <>
-      <CardMovies moviesType="upcoming" pageSize={20} page={page} />
+      <CardMovies movieType={["upcoming"]} pageSize={20} page={page} />
       {/* <PaginationDemo totalPages={20} /> */}
     </>
   );

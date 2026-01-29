@@ -1,5 +1,5 @@
 import bcryptjs from "bcryptjs"
-import User from '../models/user';
+import User from '../../core/models/user';
 
 /* signup auth */
 export async function signupUser(data: { name: string, username: string, email: string, password: string }) {

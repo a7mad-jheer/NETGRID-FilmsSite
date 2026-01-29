@@ -1,18 +1,15 @@
-import SideMenu from "@/app/components/defaults/SideMenu";
-import MaxWidthWrapper from "@/app/components/defaults/MaxWidthWrapper";
-
+import SideMenu from "@/components/Dashboard/defaults/SideMenu";
+import MaxWidthWrapper from "@/components/Dashboard/defaults/MaxWidthWrapper";
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <main className="flex min-h-screen bg-gray-950">
-            <SideMenu />
-            <div className="grow min-w-0  p-4 ">
-            {children}
-            </div>
-        </main>
-    );
+  return (
+    <main className="flex min-h-screen bg-gray-950">
+      <SideMenu />
+      <div className="grow min-w-0  p-4 ">{children}</div>
+    </main>
+  );
 }

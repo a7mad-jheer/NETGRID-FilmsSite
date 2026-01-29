@@ -5,11 +5,11 @@ import { FaYoutube } from "react-icons/fa";
 import { FaClipboardList } from "react-icons/fa";
 import { MdRateReview } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
-import Favorite from "@/app/components/DashboardFolder/FavoriteUser";
+import Favorite from "@/components/Dashboard/UserProfile/FavoriteUser";
 import { useState } from "react";
-import Watched from "@/app/components/DashboardFolder/Watched";
-import Watchlist from "@/app/components/DashboardFolder/Watchlist";
-import Reviews from "@/app/components/DashboardFolder/Reviews";
+import Watched from "@/components/Dashboard/UserProfile/Watched";
+import Watchlist from "@/components/Dashboard/UserProfile/Watchlist";
+import Reviews from "@/components/Dashboard/UserProfile/Reviews";
 
 export default function Profile() {
   const [tab , setTab] = useState("favorite")

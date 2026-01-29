@@ -1,4 +1,4 @@
-import { ButtonDemo } from "@/app/components/ButtonAnimations/ButtonCard";
+import { ButtonDemo } from "@/components/LandingPage/ButtonAnimations/ButtonCard";
 import { Label } from "@/components/ui/label";
 import {
   Select,
@@ -159,17 +159,18 @@ export default function Setting() {
               </div>
             </div>
 
-
             <div className="bg-gray-950 mt-2 ">
-          <h1>Danger Zone</h1>
+              <h1>Danger Zone</h1>
 
-          <div className="flex justify-around items-center space-x-2 py-3 border-t border-b">
-            <ButtonDemo title="LogOut" />
-            <ButtonDemo title="Delete Account" />
-          </div>
+              <div className="flex justify-around items-center space-x-2 py-3 border-t border-b">
+                <ButtonDemo title="LogOut" />
+                <ButtonDemo title="Delete Account" />
+              </div>
 
-          <p className="text-[10px] text-gray-500">permanetly remove your account.</p>
-        </div>
+              <p className="text-[10px] text-gray-500">
+                permanetly remove your account.
+              </p>
+            </div>
           </div>
         </div>
       </section>
