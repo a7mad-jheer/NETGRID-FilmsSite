@@ -1,17 +1,10 @@
-import CardMovies from "@/components/Dashboard/CardMovies/CardMovies";
-import { PaginationDemo } from "@/components/Dashboard/defaults/Bagination";
+import { SearchNowPlaying } from "@/components/Dashboard/global/SearchNowPlaying";
+import { Suspense } from "react";
 
-export default function TopRated({
-  searchParams,
-}: {
-  searchParams?: { page?: string };
-}) {
-  const page = Number(searchParams?.page) || 1;
-
+export default function TopRated() {
   return (
-    <>
-    <CardMovies  movieType ={["top_rated"]} pageSize={20} page={page}/>
-      <PaginationDemo totalPages={20} />
-    </>
+    <Suspense fallback={<>Loading...</>}>
+      <SearchNowPlaying movieType={["top_rated"]}/>
+    </Suspense>
   );
 }

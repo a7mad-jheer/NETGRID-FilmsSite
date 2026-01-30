@@ -1,16 +1,12 @@
-import CardMovies from "@/components/Dashboard/CardMovies/CardMovies";
+import { SearchNowPlaying } from "@/components/Dashboard/global/SearchNowPlaying";
+import { Suspense } from "react";
 
-
-export default function Movies ({
-  searchParams,
-}: {
-  searchParams?: { page?: string };
-}) {
-
-  const page = Number(searchParams?.page) || 1;
+export default function Movies() {
   return (
-    <CardMovies movieType ={ ["popular", "top_rated", "upcoming", "now_playing"]} pageSize={20} page={page}/>
-  )
+    <Suspense fallback={<>Loading...</>}>
+      <SearchNowPlaying movieType={["popular", "top_rated", "upcoming", "now_playing"]}/>
+    </Suspense>
+  );
 }
 
 

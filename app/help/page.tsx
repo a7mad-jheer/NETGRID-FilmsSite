@@ -1,11 +1,12 @@
 import Footer from "@/components/LandingPage/Footer/Footer";
-import { SpotlightPreview } from "@/components/Dashboard/defaults/SotlightBg";
-import DashboardNav from "@/app/components/Nav/LandingNav";
+import { SpotlightPreview } from "@/components/Dashboard/global/SotlightBg";
+import LandingNav from "@/components/LandingPage/LandingNav";
+
 
 export default function HelpPage() {
   return (
     <SpotlightPreview>
-      <DashboardNav />
+      <LandingNav />
 
       <div className="relative flex flex-col min-w-screen items-center">
         <section className="w-full  bg-black/10 backdrop-blur-md pt-50 pb-20 px-4 border-t-3 inset-shadow-lime-300">

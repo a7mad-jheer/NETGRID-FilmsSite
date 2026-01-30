@@ -1,5 +1,5 @@
 "use client";
-import Spinner from "../../Dashboard/defaults/Spinner";
+import Spinner from "../../Dashboard/global/Spinner";
 import Link from "next/link";
 
 interface ButtonAnimProps {

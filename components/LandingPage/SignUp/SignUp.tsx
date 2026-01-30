@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import z from "zod";
-import FormInput from "../../Dashboard/defaults/FormInput";
+import FormInput from "../../Dashboard/global/FormInput";
 import { Form } from "@/components/ui/form";
-import MaxWidthWrapper from "../../Dashboard/defaults/MaxWidthWrapper";
-import MotionItem from "../../Dashboard/defaults/MotionItem";
-import Logo from "../../Dashboard/defaults/Logo";
+import MaxWidthWrapper from "../../Dashboard/global/MaxWidthWrapper";
+import MotionItem from "../../Dashboard/global/MotionItem";
+import Logo from "../../Dashboard/global/Logo";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -78,7 +78,7 @@ export default function SignUp() {
       whileInView={{ y: 0, x: 0, opacity: 4 }}
     >
       <MaxWidthWrapper className="w-fit bg-black/40 p-10 rounded-2xl text-center">
-        <Logo className="text-3xl " />
+        <Logo className="text-3xl " href="/"/>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormInput name="name" label="Name" />

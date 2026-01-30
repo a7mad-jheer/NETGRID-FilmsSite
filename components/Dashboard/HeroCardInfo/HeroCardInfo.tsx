@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MotionItem from "../defaults/MotionItem";
+import MotionItem from "../global/MotionItem";
 
 export default function HeroCardInfo({
   title,

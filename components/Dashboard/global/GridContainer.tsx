@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 
-export default function GridContainer({cols , children, className} : {cols:number ; children:ReactNode ; className?: string}) {
+type GridCols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+
+export default function GridContainer({cols , children, className} : {cols:GridCols ; children:ReactNode ; className?: string}) {
     const gridClasses = {
         1:' grid-cols-1',
         2:' grid-cols-2',

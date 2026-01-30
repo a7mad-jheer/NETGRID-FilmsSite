@@ -1,6 +1,5 @@
-import Logo from "../Dashboard/defaults/Logo";
+import Logo from "../Dashboard/global/Logo";
 import ButtonAnim from "./ButtonAnimations/ButtonAnim";
-
 
 export default async function LandingNav() {
   return (

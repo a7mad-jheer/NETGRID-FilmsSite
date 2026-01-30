@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import FormInput from "../../Dashboard/defaults/FormInput";
-import MotionItem from "../../Dashboard/defaults/MotionItem";
-import MaxWidthWrapper from "../../Dashboard/defaults/MaxWidthWrapper";
-import Logo from "../../Dashboard/defaults/Logo";
+import FormInput from "../../Dashboard/global/FormInput";
+import MotionItem from "../../Dashboard/global/MotionItem";
+import MaxWidthWrapper from "../../Dashboard/global/MaxWidthWrapper";
+import Logo from "../../Dashboard/global/Logo";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import jwt from "jsonwebtoken";
@@ -25,7 +25,7 @@ const loginSchema = z.object({
 
 export default function Login() {
   const router = useRouter();
-  const [loading , setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
   //z.infer يتحقق من نوع البيانات اللي داخلة ولا يتحقق من القواعد الدقيقة يهمو فقط بس نوع البيانات
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),

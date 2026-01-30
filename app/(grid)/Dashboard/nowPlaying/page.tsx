@@ -1,19 +1,10 @@
+import { SearchNowPlaying } from "@/components/Dashboard/global/SearchNowPlaying";
+import { Suspense } from "react";
 
-import CardMovies from "@/components/Dashboard/CardMovies/CardMovies";
-import { PaginationDemo } from "@/components/Dashboard/defaults/Bagination";
-
-export default function NowPlaying({
-  searchParams,
-}: {
-  searchParams?: { page?: string };
-}) {
-  const page = Number(searchParams?.page) || 1;
+export default function NowPlaying() {
   return (
-    <>
-      <>
-        <CardMovies movieType={["now_playing"]} pageSize={20} page={page} />
-        <PaginationDemo totalPages={20} />
-      </>
-    </>
+    <Suspense fallback={<>Loading...</>}>
+      <SearchNowPlaying movieType={["now_playing"]}/>
+    </Suspense>
   );
 }

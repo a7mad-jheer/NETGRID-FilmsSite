@@ -1,11 +1,12 @@
 "use client";
-import { 
-  Pagination, 
-  PaginationContent, 
-  PaginationItem, 
-  PaginationLink, 
-  PaginationNext, 
-  PaginationPrevious 
+
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
 } from "@/components/ui/pagination";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -24,8 +25,10 @@ export function PaginationDemo({ totalPages }: { totalPages: number }) {
         {/* Previous */}
         <PaginationItem>
           <PaginationPrevious
-            disabled={currentPage === 1}
-            onClick={() => goToPage(currentPage - 1)} // <--- هذا الجديد
+            onClick={() => currentPage > 1 && goToPage(currentPage - 1)}
+            className={
+              currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
+            }
           />
         </PaginationItem>
 
@@ -36,7 +39,7 @@ export function PaginationDemo({ totalPages }: { totalPages: number }) {
             <PaginationItem key={page}>
               <PaginationLink
                 isActive={page === currentPage}
-                onClick={() => goToPage(page)} // <--- هذا الجديد
+                onClick={() => goToPage(page)}
               >
                 {page}
               </PaginationLink>
@@ -47,8 +50,14 @@ export function PaginationDemo({ totalPages }: { totalPages: number }) {
         {/* Next */}
         <PaginationItem>
           <PaginationNext
-            disabled={currentPage === totalPages}
-            onClick={() => goToPage(currentPage + 1)} // <--- هذا الجديد
+            onClick={() =>
+              currentPage < totalPages && goToPage(currentPage + 1)
+            }
+            className={
+              currentPage === totalPages
+                ? "opacity-50 cursor-not-allowed"
+                : ""
+            }
           />
         </PaginationItem>
       </PaginationContent>

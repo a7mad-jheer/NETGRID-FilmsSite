@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import BtnCard from "../defaults/BtnCard";
+import BtnCard from "../global/BtnCard";
 import { useState } from "react";
 import Link from "next/link";
-import BtnShowMore from "../defaults/BtnShowMore";
+import BtnShowMore from "../global/BtnShowMore";
 
 export default function MoviesList({
   movies,
@@ -86,7 +86,7 @@ export default function MoviesList({
                   </div>
                 </div>
               );
-            }
+            },
           )}
       </div>
 

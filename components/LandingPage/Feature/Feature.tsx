@@ -5,8 +5,9 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 export function Feature() {
   return (
     <div className="h-[20rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <h2 className="mb-4 text-xl font-bold">Why You Choose Us !</h2>
       <InfiniteMovingCards
-        headTitle="Why You Choose Us !"
+       
         items={testimonials}
         direction="right"
         speed="slow"

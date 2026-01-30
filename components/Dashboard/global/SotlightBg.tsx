@@ -1,4 +1,4 @@
-"use client";
+
 import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/spotlight";
 

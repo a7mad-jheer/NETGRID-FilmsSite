@@ -1,10 +1,10 @@
 import { searchMovies } from "@/core/utils/api";
-import { SpotlightPreview } from "@/components/Dashboard/defaults/SotlightBg";
-import MaxWidthWrapper from "@/components/Dashboard/defaults/MaxWidthWrapper";
+import { SpotlightPreview } from "@/components/Dashboard/global/SotlightBg";
+import MaxWidthWrapper from "@/components/Dashboard/global/MaxWidthWrapper";
 import Footer from "@/components/LandingPage/Footer/Footer";
 import { Feature } from "@/components/LandingPage/Feature/Feature";
 import { WelcomeCard } from "@/components/LandingPage/WelcomCard";
-import { TextGenerateEffectDemo } from "@/components/Dashboard/defaults/TextEffect";
+import { TextGenerateEffectDemo } from "@/components/Dashboard/global/TextEffect";
 import LandingNav from "@/components/LandingPage/LandingNav";
 import SimpleCard from "@/components/LandingPage/SimpleCard";
 

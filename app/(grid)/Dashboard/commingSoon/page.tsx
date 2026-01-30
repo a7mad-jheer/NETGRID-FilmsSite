@@ -1,17 +1,10 @@
-import CardMovies from "@/components/Dashboard/CardMovies/CardMovies";
+import { SearchNowPlaying } from "@/components/Dashboard/global/SearchNowPlaying";
+import { Suspense } from "react";
 
-
-export default function CommingSoon({
-  searchParams,
-}: {
-  searchParams?: { page?: string };
-}) {
-  const page = Number(searchParams?.page) || 1;
-
+export default function CommingSoon() {
   return (
-    <>
-      <CardMovies movieType={["upcoming"]} pageSize={20} page={page} />
-      {/* <PaginationDemo totalPages={20} /> */}
-    </>
+    <Suspense fallback={<>Loading...</>}>
+      <SearchNowPlaying movieType={["upcoming"]}/>
+    </Suspense>
   );
 }

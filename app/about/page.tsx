@@ -1,5 +1,6 @@
-import Footer from "../../../components/LandingPage/Footer/Footer";
-import { SpotlightPreview } from "../../../components/Dashboard/defaults/SotlightBg";
+import { SpotlightPreview } from "@/components/Dashboard/global/SotlightBg";
+import Footer from "@/components/LandingPage/Footer/Footer";
+
 import LandingNav from "@/components/LandingPage/LandingNav";
 
 

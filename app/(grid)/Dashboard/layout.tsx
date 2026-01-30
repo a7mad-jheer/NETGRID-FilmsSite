@@ -1,5 +1,5 @@
-import SideMenu from "@/components/Dashboard/defaults/SideMenu";
-import MaxWidthWrapper from "@/components/Dashboard/defaults/MaxWidthWrapper";
+import SideMenu from "@/components/Dashboard/global/SideMenu";
+import MaxWidthWrapper from "@/components/Dashboard/global/MaxWidthWrapper";
 
 export default function RootLayout({
   children,
